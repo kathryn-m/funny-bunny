@@ -1,7 +1,7 @@
 :root {
-    --base: #d991b3;
-    --base2: #8bcfe8;
-    --base3: #e6a250;
+    --ear-color: #d991b3;
+    --eye-color: #8bcfe8;
+    --nose-color: #e6a250;
  }
  
  html, body {
@@ -11,17 +11,33 @@
  
 body {
    box-sizing: border-box;
-   background-color: var(--base3);
+   background-color: var(--nose-color);
    font-family: sans-serif;
+   transition: all 200ms;
 }
 
 section {
     background: rgba(255,255,255,.8);
     width: 100vw;
     height: 100vh;
-    padding-top: 2em;
+    padding-top: 2rem;
 }
 
+/* UTILITY CLASSES */
+.flex-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-wrap > * {
+  margin-bottom: .5rem;
+}
+
+/* LAYOUT */
+
+/* Rabbit */
 .head {
 background: white;
 height: 6em;
@@ -43,7 +59,7 @@ margin: -5em .5em;
 }
 
 .inner-ear {
-background: var(--base);
+background: var(--ear-color);
 height: 5em;
 width: 1.8em;
 border-radius: 50%;
@@ -75,7 +91,7 @@ border-radius:  50%;
 }
 
 .pupil {
-background: var(--base2);
+background: var(--eye-color);
 width: .5em;
 height: .5em;
 border-radius: 50%;
@@ -87,7 +103,7 @@ width: 0;
 margin: .1em auto 0;
 border-left: 9px solid transparent;
 border-right: 9px solid transparent;
-border-top: 9px solid var(--base3);
+border-top: 9px solid var(--nose-color);
 border-radius: 50%;
 }
 
@@ -100,6 +116,7 @@ border-bottom: darkgray solid 2px;
 margin: 0 auto;
 }
 
+/* Controls */
 .controls-container {
 display: flex;
 flex-direction: column;
@@ -119,4 +136,8 @@ justify-content: space-evenly;
 
 .controls div {
 margin: 1em 1em;
+}
+
+label {
+  margin-right: .75rem;
 }

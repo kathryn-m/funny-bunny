@@ -101,11 +101,11 @@ function updateNose(feature){
 
 function handleUpdate(e) {
     const feature = e.target
-    if(feature.name === "base"){
+    if(feature.name === "ear-color"){
         updateEars(feature)
-    }else if(feature.name === "base2"){
+    }else if(feature.name === "eye-color"){
         updateEyes(feature)
-    }else if(feature.name === "base3"){
+    }else if(feature.name === "nose-color"){
         updateNose(feature)
     }
 }

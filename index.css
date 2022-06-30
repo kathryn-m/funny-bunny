@@ -17,11 +17,14 @@ body {
 }
 
 section {
-    background: rgba(255,255,255,.8);
-    width: 100vw;
-    height: 100vh;
-    padding-top: 2rem;
+  background: rgba(255,255,255,.8);
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 
 /* UTILITY CLASSES */
 .flex-wrap {
